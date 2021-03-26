@@ -1,6 +1,8 @@
-# Aprender R (Swirl stats)
+# Aprender R
 
-## Lesson 1 Basic Building Blocks
+## [Swirl Stats](https://swirlstats.com/)
+
+## Lesson 1 - *Basic Building Blocks*
 
 - Simples adições/operações resultam sempre num output na consola.  
 - Qualquer tipo de atribuição de valor não mostra qualquer tipo de output.  
@@ -11,7 +13,7 @@
 - Por exemplo -> c(1,2,3,4) + 10 = c(1,2,3,4) + c(10,10,10,10).  
 - Caso não seja divisível a operação érealizada na mesma mas a consola irá avisar que o resultado poderá ser estranho.  
 
-## Lesson 2  Workspace and Files
+## Lesson 2 -  *Workspace and Files*
 
 - Obter a pasta onde se está a trabalhar -> getwd().  
 - A lista de todos os objetos dentro do workspace local -> ls().  
@@ -27,7 +29,7 @@
 - Fazer uma cópia de um certo ficheiro -> file.copy().  
 - Ver o path relativo de um ficheiro -> file.path().  
 
-## Lesson 3 Sequence of Numbers
+## Lesson 3 - *Sequence of Numbers*
 
 - Forma mais simples de fazer uma sequência é assim -> 1:20 (dá todos os números inteiros de 1 até 20)
 - Também se pode fazer uma sequência desta forma -> seq()

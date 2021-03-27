@@ -41,3 +41,30 @@ A outra forma de se ver o tamanho da sequência é usar o comando -> seq(along.w
 - Mais uma forma de criar sequências de números -> rep( x, times = n, each = m).  
 times (vezes que queremos que se repita).  
 each (quantas vezes queremos que cada elemento se repita).  
+
+## Lesson 4 - *Vectors*
+
+- Vetores são a data structure mais simples  e comum em R.  
+- Existem dois tipos de vetores: atomic vectors e lists.  
+- Atomic vectors contem apenas um tipo de dado enquanto que uma lista podes conter vários tipos de dados.  
+Vamos primeiro explorar atomic vectores e depois passamos para listas.  
+- Nas lições anteriores lidamos apenas com vetores numericos que são um tipo de atomic vector.  
+Outros tipos de atomic vectors incluem: logical, character, integer e complexos.  
+Nesta lição vamos focar nos logical e character vectors.
+
+### 4.1 - *Logical Vectors*  
+
+- Vetores logicos contêm os valores *TRUE*, *FALSE* e *NA* (de 'not available').  
+Este valores são gerados a partir de logical conditions.
+- Uma expressão do género tf = c(0.5,55,-10, 6) < 1 diz-nos se cada integrante deste vetor é menor que 1 usando *TRUE* ou *FALSE* e cria um vetor com estes valores.  
+- Os símbolos '**<**' , '**<=**' , '**>=**' , '**>**' , '**=**' , '**!=**' são demominados logical operators.
+- Quando temos duas logical expressions **A** e **B**, podemos perguntar se pelo menos uma é *TRUE* com  **A | B** (operador para 'ou' e também 'união').  
+Para se verificar se a duas são *TRUE* utiliza-se a **A & B** (operador para 'e' e também 'intersecção').  
+Por fim, **!A** é a negação de A que é *TRUE* quando **A** é *FALSE* e vice-versa.  
+
+### 4.2 - *Character Vectors*  
+
+- Character vectors também são muito utilizados em R e são distinguidos pelos outros tipos através do uso de aspas para os seus elementos.  
+- Se quisermos juntar todos os contituintes do vetor de tamamho 3 que temos e torna-lo num vetor de tamanho 1 podemos usar uma funcão denominada -> paste(x , collaplse = ' ').  
+ O parametro colapse diz a função o que deve meter entre os elementos do vetor x.  
+- Para adicionar algum elemento a um certo vetor pode-se usar a função c assim -> c(x, y), onde x é o vetor que já tinhamos e o y é o elemento que desejamos adicionar.  

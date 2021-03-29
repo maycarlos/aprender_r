@@ -66,5 +66,29 @@ Por fim, **!A** é a negação de A que é *TRUE* quando **A** é *FALSE* e vice
 
 - Character vectors também são muito utilizados em R e são distinguidos pelos outros tipos através do uso de aspas para os seus elementos.  
 - Se quisermos juntar todos os contituintes do vetor de tamamho 3 que temos e torna-lo num vetor de tamanho 1 podemos usar uma funcão denominada -> paste(x , collaplse = ' ').  
- O parametro colapse diz a função o que deve meter entre os elementos do vetor x.  
+ O parâmetro collapse diz a função o que deve meter entre os elementos do vetor x.  
 - Para adicionar algum elemento a um certo vetor pode-se usar a função c assim -> c(x, y), onde x é o vetor que já tinhamos e o y é o elemento que desejamos adicionar.  
+
+## Lesson 5 - *Missing Values*
+
+- Missing values têm uma função importante em estatística e em análise de dados.  
+Geralmente, estes missing values não devem ser ignorados mas sim estudados para ver se existe algum padrão ou razão que cause a existência destes tipos de valor
+- Em R, **NA** é usaddo para representar qualquer valor que "não está disponível" ou que "falta".
+- Qualquer operação que envolve **NA** geralmente resulta em **NA**.  
+Por exemplo se multiplicarmos o vetor c(44, NA, 5, NA) por 3 o resultado será -> (132,  NA,  15,  NA).
+- rnorm(x)-> criar uma distribuição normal aleatória com x elementos e de média = 0.
+- sample(x, n) -> retira uma amostra de tamanho *n* do vetor/grupo de vetores *x*
+- is.na(x) -> Verifica se os valores presentes no vetor *x* são **NA** ou não, resultando em vetores que contêm *TRUE* se o valor for **NA**  ou *FALSE* para qualquer outro tipo de dado.  
+- Existe outro tipo de missing value que é o **NaN** que é denominado "not a number"
+
+## Lesson 6 - *Subsetting Vectors*
+
+- Nesta lição é para ver como é que se extrai elementos de um vetor em função de condições que nós delimitamos.
+- Assumindo que *x* <- sample(c(rnorm(20), rep(NA, 20)), 40).  
+- x[1:10] -> porção do 10 primeiros elementos do vetor *x*.
+- x[is.na(x)] irá resultar num vetor com todos os elementos **NA** do vetor *x*.  
+Usando o operador de negação ! podemos usar a expressão acima para obter todos os números do vetor *x* assim -> x[!is.na(x)].
+- Para obtermos todos os valores que não são **NA** e são maiores do que 0 podemos usar a expressão x[!is.na(x) & x > 0]
+- Se só quisermos os valores que estão na 3ª, 5ª e 7ª posição do vetor *x* usamos a expressão x(c(3,5,7)).  
+Atenção que em R as posições do vetores começam a ser contadas a partir de 1.  
+- Em contrapartida, se quisermos todos os elementos menos o 2º e o 10º do vetor *x* podemos utilizar a expressão x[c(-2,-10)] ou x[-c(2,10)].  

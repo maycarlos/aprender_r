@@ -9,16 +9,16 @@
 - Operações básicas -> (+, - , * , / , ^, sqrt(), etc.).  
 - Criação de vetores -> c().
 - Podemos considerar números isolados como 100, vetores com length = 1.  
-- Ao adicionar vetores com tamanhos diferentes(mas que o vetor maior seja divisível pelo mais pequeno), o R 'recicla' estes constituintes.  
+- Ao adicionar vetores com tamanhos diferentes (mas que o vetor maior seja divisível pelo mais pequeno), o R 'recicla' estes constituintes.  
 - Por exemplo -> c(1,2,3,4) + 10 = c(1,2,3,4) + c(10,10,10,10).  
-- Caso não seja divisível a operação érealizada na mesma mas a consola irá avisar que o resultado poderá ser estranho.  
+- Caso não seja divisível a operação é realizada na mesma mas a consola irá avisar que o resultado poderá ser estranho.  
 
 ## Lesson 2 -  *Workspace and Files*
 
 - Obter a pasta onde se está a trabalhar -> getwd().  
 - A lista de todos os objetos dentro do workspace local -> ls().  
 - Lista de todos os ficheiros dentro de uma lista -> list.files().  
-- Para obter os argumentos necessarios para uma determinada funçao -> args().  
+- Para obter os argumentos necessários para uma determinada função -> args().  
 - Criar uma pasta -> dir.create().  
 - Mudar de pasta de trabalho -> setwd().  
 - Criar um ficheiro -> file.create().  
@@ -34,11 +34,11 @@
 - Forma mais simples de fazer uma sequência é assim -> 1:20 (dá todos os números inteiros de 1 até 20)
 - Também se pode fazer uma sequência desta forma -> seq()
 - Mas enquanto que uma sequência criada com o operador ":" dá sempre numa sequência de número em incrementos = 1, com a  função seq() nós podemos alterar este incremento utilizando o argumento -> by= x.  
-- Também se nos interessar podemos gerar uma sequência com uma certa quantidade específica de números utilizando o argumento -> length= x.  
-- Se por ventura não sabermos o tamanho da sequência que estamos a trabalhar, uma maneira de se saber é combinando o operador ":" com a função lenght() assim -> 1:length(my_seq).  
+- Também se nos interessar podemos gerar uma sequência com uma quantidade específica de elementos utilizando o argumento -> length= x.  
+- Se por ventura, não sabermos o tamanho da sequência que estamos a trabalhar, uma maneira de se saber é combinando o operador ":" com a função lenght() assim -> 1:length(my_seq).  
 A outra forma de se ver o tamanho da sequência é usar o comando -> seq(along.with = my_seq).
 - Mas o R já tem uma função para desempenhar este tipo de tarefa -> seq_along().  
-- Mais uma forma de criar sequências de números -> rep( x, times = n, each = m).  
+- Mais uma forma de criar sequências (é mais um vetor que repete o valor x, n vezes) de números -> rep( x, times = n, each = m).  
 times (vezes que queremos que se repita).  
 each (quantas vezes queremos que cada elemento se repita).  
 
@@ -54,7 +54,7 @@ Nesta lição vamos focar nos logical e character vectors.
 
 ### 4.1 - *Logical Vectors*  
 
-- Vetores logicos contêm os valores *TRUE*, *FALSE* e *NA* (de 'not available').  
+- Vetores lógicos contêm os valores *TRUE*, *FALSE* e *NA* (de 'not available').  
 Este valores são gerados a partir de logical conditions.
 - Uma expressão do género tf = c(0.5,55,-10, 6) < 1 diz-nos se cada integrante deste vetor é menor que 1 usando *TRUE* ou *FALSE* e cria um vetor com estes valores.  
 - Os símbolos '**<**' , '**<=**' , '**>=**' , '**>**' , '**=**' , '**!=**' são demominados logical operators.
@@ -65,7 +65,7 @@ Por fim, **!A** é a negação de A que é *TRUE* quando **A** é *FALSE* e vice
 ### 4.2 - *Character Vectors*  
 
 - Character vectors também são muito utilizados em R e são distinguidos pelos outros tipos através do uso de aspas para os seus elementos.  
-- Se quisermos juntar todos os contituintes do vetor de tamamho 3 que temos e torna-lo num vetor de tamanho 1 podemos usar uma funcão denominada -> paste(x , collaplse = ' ').  
+- Se quisermos juntar todos os contituintes do vetor com 3 elemento que temos e torna-lo num vetor com só 1 elemento podemos usar uma funcão denominada -> paste(x , collaplse = ' ').  
  O parâmetro collapse diz a função o que deve meter entre os elementos do vetor x.  
 - Para adicionar algum elemento a um certo vetor pode-se usar a função c assim -> c(x, y), onde x é o vetor que já tinhamos e o y é o elemento que desejamos adicionar.  
 
@@ -75,8 +75,8 @@ Por fim, **!A** é a negação de A que é *TRUE* quando **A** é *FALSE* e vice
 Geralmente, estes missing values não devem ser ignorados mas sim estudados para ver se existe algum padrão ou razão que cause a existência destes tipos de valor
 - Em R, **NA** é usaddo para representar qualquer valor que "não está disponível" ou que "falta".
 - Qualquer operação que envolve **NA** geralmente resulta em **NA**.  
-Por exemplo se multiplicarmos o vetor c(44, NA, 5, NA) por 3 o resultado será -> (132,  NA,  15,  NA).
-- rnorm(x)-> criar uma distribuição normal aleatória com x elementos e de média = 0.
+Por exemplo, se multiplicarmos o vetor c(44, NA, 5, NA) por 3 o resultado será -> (132,  NA,  15,  NA).
+- rnorm(x, n)-> criar uma distribuição normal aleatória com x elementos e de média = n (default value do n é 0).
 - sample(x, n) -> retira uma amostra de tamanho *n* do vetor/grupo de vetores *x*
 - is.na(x) -> Verifica se os valores presentes no vetor *x* são **NA** ou não, resultando em vetores que contêm *TRUE* se o valor for **NA**  ou *FALSE* para qualquer outro tipo de dado.  
 - Existe outro tipo de missing value que é o **NaN** que é denominado "not a number"

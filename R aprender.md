@@ -100,11 +100,11 @@ Ambos representam tipos de dados retangulares, isto significa que são utilizado
 - A maior diferença entre as duas é que matrizes só podem armazenar um tipo de dado enquanto que data frames podem armazenar vários tipos de dados.
 - dim() -> diz-nos as dimensões de um certo objeto.
 - Podemos atribuir dimensões a um certo vetor usando a expressão dim(1:20) <- c(4,5)
-- Outra maneira de ver as dimensões de um objeto é com a função -> attributes(). 
 - Isto fez com que o vetor passasse a ser uma matriz com 4 linhas e 5 colunas.  
-- Para confirmar que a sequencia passou a ser uma matriz podemos usar a funçao -> class() que quando é aplicada na expressão acima deverá ter o output de "matrix" "array".  
+- Outra maneira de ver as dimensões de um objeto é com a função -> attributes().  
+- Para confirmar que a sequência passou a ser uma matriz podemos usar a função -> class() que quando é aplicada na expressão acima deverá ter o output de "matrix" "array".  
 - Uma forma mais direta de criar uma matriz é utilizando a função -> matrix(x, i, j), sendo x o constituinte da matriz, i as linhas e j as colunas.
 - cbind(x,y) <- combina as colunas de x com y
-- Quando se faz um cbind com x e y se x for por exemplo um character vector, R irá alterar a matriz inteira para um character matrix isto porque matrizes só aceitam um tipo de dado dentro.
+- Quando se faz um cbind com x e y, se x for por exemplo um character vector, o R irá alterar todos os contituintes da matriz para strings isto porque matrizes só aceitam um tipo de dado dentro.
 - Para não termos esse tipo de problemas, usa-se dataframes que ao contrário das matrizes conseguem conter diferentes tipos de dados.  
-- Para atribuir nomes a colunas de uma dataframes usa-se a função colnames(x) <- values, onde x é a dataframe e values são os nomes que queremos atribuir às colunas.
+- Para atribuir nomes a colunas de uma data frams usa-se a seguinte expressão, colnames(x) <- values, onde x é a dataframe e values são os nomes que queremos atribuir às colunas.

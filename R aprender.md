@@ -108,3 +108,10 @@ Ambos representam tipos de dados retangulares, isto significa que são utilizado
 - Quando se faz um cbind com x e y, se x for, por exemplo, um character vector, o R irá alterar todos os contituintes da **matriz** para strings isto porque **matrizes** só aceitam um tipo de dado dentro.
 - Para não termos esse tipo de problemas, usa-se **data frames** que ao contrário das **matrizes** conseguem conter diferentes tipos de dados.  
 - Para atribuir nomes a colunas de uma **data frame** usa-se a seguinte expressão, colnames(x) <- values, onde x é a **data frame** e values são os nomes que queremos atribuir às colunas.
+
+## Lesson 8 - *Logic*
+
+- Isto vai ser uma pequena introdução a operações lógicas com R
+- Temos dois valores logicos em R, **True** ou **False** e podemos construir expressões que apresentam um certo resultado se verificar uma destas duas expressões.
+- Podemos usar o AND -> `&` operator para avaliar um certo valor por uma função. Esta versão do AND operator -> `&&` só avalia o primeiro valor de um vetor.  
+- o OR operator segue a mesma logica. Esta versão `|` avalia com um vetor inteiro, enquanto que esta `||` só avalia o primeiro valor

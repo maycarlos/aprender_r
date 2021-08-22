@@ -98,20 +98,25 @@ Atenção que em R as posições do vetores começam a ser contadas a partir de 
 - Nesta lição, vão ser estudados **matrizes** e **data frames**.  
 Ambos representam tipos de dados retangulares, isto significa que são utilizados para armazenar *tabular data* com linhas e colunas.
 - A maior diferença entre as duas é que **matrizes** só podem armazenar um tipo de dado enquanto que **data frames** podem armazenar vários tipos de dados.
-- dim() -> diz-nos as dimensões de um certo objeto.
+- `dim()` -> diz-nos as dimensões de um certo objeto.
 - Podemos atribuir dimensões a um certo vetor usando a expressão dim(1:20) <- c(4,5)
 - Isto fez com que o vetor passasse a ser uma **matriz** com 4 linhas e 5 colunas.  
 - Outra maneira de ver as dimensões de um objeto é com a função -> attributes().  
-- Para confirmar que a sequência passou a ser uma **matriz** podemos usar a função -> class() que quando é aplicada na expressão acima deverá ter o output de "matrix" "array".  
-- Uma forma mais direta de criar uma **matriz** é utilizando a função -> matrix(x, i, j), sendo x o constituinte da **matriz**, i as linhas e j as colunas.
-- cbind(x,y) <- combina as colunas de x com y
+- Para confirmar que a sequência passou a ser uma **matriz** podemos usar a função -> `class()` que quando é aplicada na expressão acima deverá ter o output de "matrix" "array".  
+- Uma forma mais direta de criar uma **matriz** é utilizando a função -> `matrix(x, i, j)`, sendo x o constituinte da **matriz**, i as linhas e j as colunas.
+- `cbind(x,y)` <- combina as colunas de x com y
 - Quando se faz um cbind com x e y, se x for, por exemplo, um character vector, o R irá alterar todos os contituintes da **matriz** para strings isto porque **matrizes** só aceitam um tipo de dado dentro.
 - Para não termos esse tipo de problemas, usa-se **data frames** que ao contrário das **matrizes** conseguem conter diferentes tipos de dados.  
-- Para atribuir nomes a colunas de uma **data frame** usa-se a seguinte expressão, colnames(x) <- values, onde x é a **data frame** e values são os nomes que queremos atribuir às colunas.
+- Para atribuir nomes a colunas de uma **data frame** usa-se a seguinte expressão, `colnames(x)` <- values, onde x é a **data frame** e values são os nomes que queremos atribuir às colunas.
 
 ## Lesson 8 - *Logic*
 
 - Isto vai ser uma pequena introdução a operações lógicas com R
-- Temos dois valores logicos em R, **True** ou **False** e podemos construir expressões que apresentam um certo resultado se verificar uma destas duas expressões.
-- Podemos usar o AND -> `&` operator para avaliar um certo valor por uma função. Esta versão do AND operator -> `&&` só avalia o primeiro valor de um vetor.  
-- o OR operator segue a mesma logica. Esta versão `|` avalia com um vetor inteiro, enquanto que esta `||` só avalia o primeiro valor
+- Temos dois valores lógicos em R, **TRUE** ou **FALSE** e podemos construir expressões que apresentam um certo resultado se verificar uma destas duas expressões.
+- Podemos usar o *AND* -> `&` operator para avaliar um certo valor por uma função. Esta versão do AND operator -> `&&` só avalia o primeiro valor de um vetor.  
+- o *OR* operator segue a mesma lógica. Esta versão `|` avalia com um vetor inteiro, enquanto que esta `||` só avalia o primeiro valor
+- A função `isTrue(x)` == **TRUE** só quando x igual a **TRUE**.  
+- A função `identical(x,y)` == **TRUE** quando os `x` e `y` são iguais.  
+- A função `xor(x,y)` == **TRUE** quando um dos argumentos é **TRUE** e o outro é **FALSE**.  
+- a função `which(x)`usa como argumento um vetor lógico e dá return aos valores que são equivalentes a **TRUE**.  
+- A função `any(x)` == **TRUE** quando pelo menos um dos elementos de um vetor lógico é igual a **TRUE**. Enquanto que a função `all(x)` == **TRUE** quando todos os elementos do vetor são iguais a **TRUE**.  
